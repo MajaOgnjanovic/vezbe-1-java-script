@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS vezbe 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/stil.css" />
+    <script src="js/skripta.js"></script>
+</head>
+
+<body>
+<!--IN LINE JS--><!--IN LINE JS--><!--IN LINE JS--><!--IN LINE JS--><!--IN LINE JS--><!--IN LINE JS--><!--IN LINE JS--><!--IN LINE JS-->
+ <div class="inlinejavascript">IN LINE JS:</div> 
+
+     <!-- Datum & Vreme -->
+        <h3>Datum i vreme</h3>
+        <button type="button" onclick= "document.getElementById('datum_vreme').innerHTML=Date()">Pritisni za datum i vreme</button>
+        <div id="datum_vreme">Ovde ce se upisati datum i vreme jer je id definisan ispred tekstai  u getElementById</div>
+   <hr><!-- /Datum & Vreme ------------------------------------------------------------------------------------------------------------>
+
+
+    <!-- Promeni HTML sadrzaj-->             <!-- innerHTML ima navodnike' ' string-->
+        <h3>Promeni HTML sadrzaj</h3>
+        <button type="button" onclick="document.getElementById('promeni_HTML_sadrzaj').innerHTML='Zdravo Java Script'">Promeni HTML sadrzaj</button>
+        <div id="promeni_HTML_sadrzaj">Ovaj sadrzaj ce se promeniti kada kliknemo jer je ispred teksta def Id isti kao u getelementById </div>
+    <hr><!-- /Promeni HTML sadrzaj------------------------------------------------------------------------------------------------------>
+   
+
+     <!-- Promeni HTML varijable-->          <!-- innerHTML nema navodnike' ' uvedena varijabla-->
+        <h3>Promeni HTML varijable</h3>
+        <button type="button" onclick="var ImeKnjige='Harry Poter';document.getElementById('promeni_HTML_varijable').innerHTML=ImeKnjige">Promeni Html varijable</button>
+        <div id="promeni_HTML_varijable">ja</div>
+    <hr><!-- /Promeni HTML varijable----------------------------------------------------------------------------------------------------->
+	
+	<!-- Saberi x+y; x=50 y=10-->            <!-- innerHTML nema navodnike' ' uvedena varijabla-->
+		<h3>Saberi x+y; x=50 y=10</h3>
+		<button type="button" onclick="var x=50, y=10;document.getElementById('Saberi_x_i_y').innerHTML=x+y">Saberi x+y</button>
+		<div id="Saberi_x_i_y"></div>
+	<hr><!-- /Saberi x+y; x=50 y=10-->	
+
+    <!-- Sijalica -->
+         <h3>Sijalica</h3>
+        <button type="button" onclick="document.getElementById('sijalica').src='img/pic_bulbon.gif'">Upali svetlo</button>
+        <button type="button" onclick="document.getElementById('sijalica').src='img/pic_bulboff.gif'">Ugasi svetlo</button>
+        <img id="sijalica" src="img/pic_bulboff.gif" style="height: 100px;">
+    <hr><!-- /Sijalica------------------------------------------------------------------------------------------------------------------>
+
+	<!-- Promeni velicinu fonta na 45px-->  <!-- Obrati paznju na style.fontSize='45px'-->
+		<h3>Promena velicine fonta</h3>
+		<button type="button" onclick="document.getElementById('veci_font').style.fontSize='45px'" >Pritisni za promenu fonta 45px</button>
+		<div id="veci_font">Ovo je tekst koji ce promeniti velicinu slova</div>
+	<hr><!-- /Promeni velicinu fonta na 45px------------------------------------------------------------------------------------------------>
+	
+	<!--Sakrij/Otkrij HTML tekst koristeci JS-->
+		<h3>Sakrij/Otkrij HTML koristeci JS</h3>
+		<button type="button" onclick="document.getElementById('sakrij_sadrzaj').style.display='none'">Sakrij HTML tekst koristeci JS</button>
+		<div id="sakrij_sadrzaj">Ovo je tekst koji ce se sakriti</div>
+<br>    <button type="button" onclick="document.getElementById('otkrij_sadrzaj').style.display='block'">Otkrij HTML tekst koristeci JS</button>
+		 <!--ne moze ovako jer se taj tekst pojavljuje u startu <div id="otkrij_sadrzaj">Ovo je tekst koji se pojavio</div>b OVDE JE BLOCK A NE NONE-->
+		<div id="otkrij_sadrzaj" style="display: none"><img src="img/puppy.jpg" style="height:300px">Evo ga i tekst koji se pojavio</div>
+	<hr><!-- /Sakrij/Otkrij HTML tekst koristeci JS--------------------------------------------------------------------------------------------------->
+	
+	<!--Kreiraj varijablu z gde je z=x+y, prikazi je u alert box-->
+		<h3>Kreiraj varijablu z gde je z=x+y, x=5, y=10,prikazi je u alert box</h3>
+		<button type="button"onclick="var x=5, y=10, z=x+y; alert(z)">Izracunaj z</button>
+	<hr><!-- /Kreiraj varijablu z gde je z=x+y, prikazi je u alert box----------------------------------------------------------------------->
+	
+	<!--U jednoj liniji napisi ime prezime i godine ali u aert boxu-->
+		<h3>U jednoj liniji napisi ime prezime i godine ali u aert boxu</h3>
+		<button type="button" onclick="var ime= 'Pera', prezime='Peric',godine=25;alert(ime+'\n ' +prezime+' '+godine)">Ime prezime i godine u alert</button>	
+	<hr><!-- /U jednoj liniji napisi ime prezime i godine ali u aert boxu------------------------------------------------------------------------->
+
+	<!--Pomnozi 10x5 i rezultat prikazi u alert boxu-->
+	<h3>Pomnozi 10x5 i rezultat prikazi u alert boxu</h3>
+	<button type="button" onclick="var x=10, y=5,rezultat;alert(rezultat=x*y)">Izracunaj proizvod</button>
+	<!--ili isto je
+	<button type="button" onclick="var x=10, y=5,rezultat=x*y;alert(rezultat)">Izracunaj proizvod</button>-->
+	<hr><!-- /Pomnozi 10x5 i rezultat prikazi u alert boxu----------------------------------------------------------------------------->
+	
+	<!--Podeli 10sa2 i rezultat prikazi u alert boxu-->
+	<h3>Podeli 10sa2 i rezultat prikazi u alert boxu</h3>
+	<button type="button" onclick="var x=10, y=2 ,rezultat;alert(rezultat=x/y)">Izracunaj kolicnik</button>
+	<hr><!-- /Podeli 10sa2 i rezultat prikazi u alert boxu------------------------------------------------------------------------------>
+	
+	<!--X=10 Y=5 izracunaj X gde je X+=Y (same as x = x + y) u alertu-->
+	<h3>X=10, Y=5 izracunaj X gde je X+=Y (same as x = x + y)alert boxu</h3>
+	<button type="button" onclick="var x=10, y=5; x+=y;alert(x)">Izracunaj x+=y</button>
+	<hr><!-- /X=10 Y=5 izracunaj X gde je X+=Y (same as x = x + y)u alertu--------------------------------------------------->
+
+	<!--X=10 Y=5 izracunaj X gde je X*=Y (same as x = x * y) u alertu-->
+	<h3>X=10, Y=5 izracunaj X gde je X*=Y (same as x = x * y)alert boxu</h3>
+	<button type="button" onclick="var x=10, y=5; x*=y;alert(x)">Izracunaj x*=y</button>
+	<hr><!-- /X=10 Y=5 izracunaj X gde je X*=Y (same as x = x * y)u alertu--------------------------------------------------->
+
+
+
+
+
+
+	
+<!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS-->
+<div class="inlinejavascript">EKSTERNI JS:</div>
+
+    <!-- Datum & Vreme -->
+        <h3>Datum i vreme</h3>
+        <button type="button" onclick="datum_vreme()">Pritisni za datum i vreme</button>
+                          <!-- ZA INLINE         onclick="document.getElementById('datum_vreme').innerHTML=Date()"-->
+       <div id="pozovi_datum_vreme">Ovaj sadrzaj ce se promeniti jer pozivam f-ju iz JS</div>
+                        <!--funkcija u JS se pise
+                                function datum_vreme(){
+                                    document.getElementById('pozovi_datum_vreme').innerHTML = Date();
+								}
+						-->       
+    <hr><!-- /Datum & Vreme ----------------------------------------------------------------------------------------------------------->
+
+    <!-- Promeni HTML sadrzaj-->
+        <h3>Promeni HTML sadrzaj</h3>
+        <button type="button" onclick="promeni_Html_Sadrzaj()">Promeni HTML sadrzaj</button>
+        <div id="pozovi_promenu_HTML_sadrzaja">Ovaj sadrzaj ce se promeniti jer pozivam f-ju iz JS</div>
+                        <!--funkcija u JS se pise
+								function promeni_Html_Sadrzaj(){
+									document.getElementById('pozovi_promenu_HTML_sadrzaja').innerHTML= 'Zdravo Java Script'
+								}
+                        --> 
+    <hr><!-- /Promeni HTML sadrzaj--------------------------------------------------------------------------------------------------->
+
+    <!-- Promeni HTML varijable-->
+        <h3>Promeni HTML varijable</h3>
+        <button type="button" onclick="promeni_HTML_Varijable()">Promeni HTML varijable</button>
+        <div id="pozovi_promenu_HTML_Varijable"></div>
+                        <!--funkcija u JS se pise
+								function promeni_HTML_Varijable(){
+									var ImeKnjige='Harry Poter';document.getElementById('pozovi_promenu_HTML_Varijable').innerHTML=ImeKnjige
+								}
+                        --> 
+	<hr><!-- / Promeni HTML varijable---------------------------------------------------------------------------------------------->
+	
+	<!-- Saberi x+y; x=50 y=10-->	
+		<h3>Saberi x+y; x=50 y=10</h3>
+		<button type="button" onclick="saberi_x_y()">Saberi x+y</button>
+		<div id="pozovi_saberi_x_y"></div>
+						<!--funkcija u JS se pise
+								function saberi_x_y(){
+									var x=50, y=10;
+									document.getElementById('pozovi_saberi_x_y').innerHTML=x+y;
+								}
+                        --> 
+	<hr><!-- / Saberi x+y; x=50 y=10----------------------------------------------------------------------------------------------->	
+   
+     <!-- Sijalica -->
+         <h3>Sijalica</h3>
+         <button type="button" onclick="Upali()">Upali svetlo</button>
+         <button type="button" onclick="Ugasi()">Ugasi svetlo</button>
+         
+         <img id="pozovi_sijalicu" src="img/pic_bulboff.gif" style="height: 100px;">
+    <hr><!-- /Sijalica------------------------------------------------------------------------------------------------------------->
+	
+	<!-- Promeni velicinu fonta-->
+		<h3>Promena velicine fonta</h3>
+		<button type="button" onclick="velicina_fonta()">Promeni velicinu fonta na 45px</button>
+		<div id="pozovi_promenu_fonta">Ovo je tekst koji ce promeniti velicinu slova</div>
+						<!--funkcija u JS se pise
+								function velicina_fonta(){
+									document.getElementById('pozovi_promenu_fonta').style.fontSize='45px';
+								}
+                        --> 
+	<hr><!-- /Promeni velicinu fonta------------------------------------------------------------------------------------------------->
+
+	<!--Sakrij/Otkrij HTML tekst koristeci JS-->
+		<h3>Sakrij/Otkrij HTML tekst koristeci JS</h3>
+			<button type="button" onclick="sakrij()">Sakrij HTML tekst koristeci JS</button>
+			<div id="pozovi_skrivanje_teksta">Ovo je neki tekst koji ce se sakriti</div>
+						<!--funkcija u JS se pise
+								function sakrij(){
+									document.getElementById('pozovi_skrivanje_teksta').style.display='none';
+								}
+                        --> 
+	<br>	<button type="button" onclick="otkrij()">Otkrij HTML tekst i sliku kucu koristeci JS</button>
+			<div id="pozovi_otkrivanje_teksta" style="display: none"><img src="img/puppy.jpg" style="height:300px">Evo ga i tekst koji se pojavio</div>
+						<!--funkcija u JS se pise
+                            function otkrij(){
+								document.getElementById('pozovi_otkrivanje_teksta').style.display='block';
+							}
+							OBJASNJENJE style.display= ili block ili none:
+										{display: none;}                 ne prikazuje Hello World koji je izmedju cao Majo
+										{display: inline;}               sve u istom redu cao HELLO WORLD! Majo
+										{display: block;}                   cao
+																			HELLO WORLD!
+																			Majo
+										{display: inline-block;}         cao HELLO WORLD! Majo -->
+	<br><br>	<button type="button" onclick="otkrij_sakrij()">Otkrij pa sakrij HTML tekst koristeci JS</button>
+			<div id="pozovi_otkrivanje_sakrivanje_teksta" style="display: none"><img src="img/maca.jpg" style="height:300px">Maca u kutuji</div>	
+	<hr><!-- /Sakrij/Otkrij HTML tekst koristeci JS--------------------------------------------------------------------------------------------------->
+
+
+	
+	
+	<!--Kreiraj varijablu z gde je z=x+y, prikazi je u alert box-->
+		<h3>Kreiraj varijablu z gde je z=x+y, x=5, y=10, prikazi je u alert box</h3>
+		<button type="button"onclick="pozivam_alert_zbir()">Izracunaj z</button>
+							<!--funkcija u JS se pise
+									function pozivam_alert_zbir(){
+										var x=5, y=10, z=x+y; alert('rezultat je:'+ z);
+									}
+							-->
+	<hr><!-- /Kreiraj varijablu z gde je z=x+y, prikazi je u alert box----------------------------------------------------------------------->
+	
+	<!--U jednoj liniji napisi ime prezime i godine ali u aert boxu-->
+		<h3>U jednoj liniji napisi ime prezime i godine ali u aert boxu</h3>
+		<button type="button"onclick="pozivam_alert_podaci()">Napisi ime prezime i godine ali u alert boxu</button>
+							<!--funkcija u JS se pise
+									function pozivam_alert_podaci(){
+										var ime= 'Pera', prezime='Peric',godine=25;alert(ime+'\n ' +prezime+' '+godine)
+									}
+							-->
+	<hr><!-- /U jednoj liniji napisi ime prezime i godine ali u alert boxu------------------------------------------------------------->
+
+	<!--Pomnozi 10x5 i rezultat prikazi u alert boxu-->
+		<h3>Pomnozi 10x5 i rezultat prikazi u alert boxu</h3>
+		<button type="button"onclick="pozivam_alert_proizvod()">Izracunaj proizvod</button>
+							<!--funkcija u JS se pise
+									function pozivam_alert_proizvod(){
+										var x=10, y=5, p=x*y; alert('rezultat je:'+ p);
+									}
+							-->
+		<hr><!-- /Pomnozi 10x5 i rezultat prikazi u alert boxu----------------------------------------------------------------------------->
+		
+	<!--Podeli 10sa2 i rezultat prikazi u alert boxu-->
+		<h3>Podeli 10sa2 i rezultat prikazi u alert boxu</h3>
+		<button type="button"onclick="pozivam_alert_kolicnik()">Izracunaj kolicnik</button>
+							<!--funkcija u JS se pise
+									function pozivam_alert_kolicnik(){
+										var x=10, y=2, k=x/y; alert('rezultat je:'+ k);
+									}
+							-->
+	<hr><!-- /Podeli 10sa2 i rezultat prikazi u alert boxu------------------------------------------------------------------------------>
+	
+	<!--X=10 Y=5 izracunaj X gde je X+=Y (same as x = x + y) u alertu-->
+		<h3>X=10, Y=5 izracunaj X gde je X+=Y (same as x = x + y)alert boxu</h3>
+		<button type="button" onclick="pozivam_alert_1()">Izracunaj x+=y</button>
+							<!--funkcija u JS se pise
+									function pozivam_alert_1(){
+										var x=10, y=5; x+=y;alert(x);  pazi na ; posle y=5
+									}
+							-->
+	<hr><!-- /X=10 Y=5 izracunaj X gde je X+=Y (same as x = x + y)u alertu--------------------------------------------------->
+   
+
+	<!--X=10 Y=5 izracunaj X gde je X*=Y (same as x = x * y) u alertu-->
+		<h3>X=10, Y=5 izracunaj X gde je X*=Y (same as x = x * y)alert boxu</h3>
+		<button type="button" onclick="pozivam_alert_2()">Izracunaj x*=y</button>
+							<!--funkcija u JS se pise
+									function pozivam_alert_2(){
+										var x=10, y=5; x*=y;alert(x);  pazi na ; posle y=5
+									}
+							-->
+	<hr><!-- /X=10 Y=5 izracunaj X gde je X*=Y (same as x = x * y)u alertu--------------------------------------------------->
+
+
+
+
+	<!--Napravi funkciju koja u alertu ispisuje "Zdravo svete!"-->
+		<h3>Napravi funkciju koja u alertu ispisuje "Zdravo svete!"</h3>
+			<button onclick="mojaFunkcija()">Klikni</button>
+								<!--funkcija u JS se pise
+										function mojaFunkcija() {
+											alert("ZdravoSvete"!)
+										}
+								-->
+	<hr><!-- /-Napravi funkciju koja u alertu ispisuje "Zdravo svete!"----------------------------------------------------------->
+
+
+	<!--Napravi funkciju koja vraca vrednost "Zdravo "-->
+		<h3>Napravi funkciju koja vraca vrednost "Zdravo"</h3>
+		<button onclick="document.getElementById('demo1').innerHTML=mojaFunkcija1()">Klikni</button>
+		<div id="demo1"></div>
+							<!--funkcija u JS se pise
+									function mojaFunkcija1() {
+									  return "Zdravo";
+									}
+							-->
+	<hr><!-- /-Napravi funkciju koja vraca vrednost "Zdravo"------------------------------------------------------------------------------>
+
+
+	<!--Napravi funkciju koja prikazuje "Hello" u inner HTML a sa ID "demo"-->
+		<h3>Napravi funkciju koja prikazuje "Hello" u inner HTML a sa ID "demo"</h3>
+		<button onclick="mojaFunkcija2()">Klikni</button>
+		<div id="demo"></div>
+							<!--funkcija u JS se pise
+									function mojaFunkcija2(){
+										document.getElementById('demo').innerHTML='Hello';
+									}
+							-->
+	<hr><!-- /-Napravi funkciju koja prikazuje "Hello" u inner HTML a sa ID "demo --------------------------------------------------------->
+
+	
+	<!--Napravi alert "Harry" koji ima objekat person a propertije ime i prezime-->
+		<h3>Napravi alert "Harry" koji ima objekat person a propertije ime i prezime, vrednosti propertija su Harry i Potter</h3>
+                   <!--INLINE  <button onclick="var person={ime:'Harry',prezime:'Potter'}; alert(person.ime)">Klikni</button>      -->
+		<button onclick="alert_za_ispis_imena()">Klikni me</button>
+							<!--funkcija u JS se pise
+									function alert_za_ispis_imena(){
+										var person={
+											ime:"Harry",
+											prezime:"Potter"
+										};
+										alert(person.ime);
+									}
+							-->
+	<hr><!-- /Napravi alert "Harry" koji ima objekat person a propertije ime i prezime------------------------------------------------>
+	
+
+	<!--Napravi alert "Harry" koji ima objekat person a propertije ime,prezime,drzava-->
+		<h3>Napravi alert da pokaze drzava:Srbija.Objekat je person a ima propertije ime,prezime,drzava.Vrednosti propertija su Harry,Potter,Srbija</h3>
+				<!--INLINE<button onclick="var person={ime:'Harry',prezime:'Potter',drzava:'Srbija'}; alert(person.drzava)">Klikni</button>   -->
+		<button onclick="alert_za_ispis_drzava()">Klikni me</button>
+							<!--funkcija u JS se pise
+									function alert_za_ispis_drzava(){
+										var person={
+											ime:"Harry",
+											prezime:"Potter",
+											drzava:'Srbija'
+										};
+										alert(person.drzava);
+									}
+							-->
+	<hr><!-- /Napravi alert "Harry" koji ima objekat person a propertije ime,prezime,drzava----------------------------------------------------->
+	
+   
+   <!--Napravi alert za objekat person a propertije ime, godine. Ime="Harry" godine=35 -->
+		<h3>Napravi alert"Harry ima 35godina" za objekat person a ima propertije ime, godine. Ime="Harry" godine=35</h3>
+				<!--INLINE<button onclick="var person={ime:'Harry',godine:35}; alert(person.ime+ ' ima' +person.godine)">Klikni</button>   -->
+		<button onclick="alert_za_ispis_recenice()">Klikni me</button>
+							<!--funkcija u JS se pise
+									function alert_za_ispis_recenice(){
+										var person={
+											ime:"Harry",
+											godine:35
+										};
+										alert(person.ime+ ' ima' +person.godine);
+									}
+							-->
+	<hr><!-- /Napravi alert za objekat person a propertije ime, godine. Ime="Harry" godine=35----------------------------------------------------->
+	
+	
+	 <!-- Razlika izmedju alerta u inline i u funkciji -->
+		<h3>Razlika izmedju alerta u inline i u funkciji</h3>
+		<button onclick ="alert('Cao drustvo inline')">Klikni me</button>
+		<button onclick="mojaFunkcija3()">Klikni me</button>
+	
+							<!--funkcija u JS se pise
+									function mojaFunkcija3(){
+										alert("Cao drustvo u funkciji!");
+									}
+									
+							-->
+	<hr><!-- /Razlika izmedju alerta u inline i u funkciji----------------------------------------------------->
+	
+	<!--Ceo Div elemet ce postati crvene boje kada hoverujemo misem preko Div-a-->
+		<h3>Ceo Div elemet i button ce postati crvene boje kada hoverujemo misem preko Div-a</h3>
+		<button onmouseover="this.style.backgroundColor='red'">Klikni me</button>
+		<div onmouseover="this.style.backgroundColor='red' ">Triplus mobile office</div>
+							<!--funkcija u JS se pise
+									
+									}
+									
+							-->
+	<hr><!-- /Ceo Div elemet ce postati crvene boje kada hoverujemo misem preko Div-a--------------------------------->
+
+	<!--Napravi alert koji racuna koliko ima slova u jednoj recenici sa spejsovima-->
+		<h3>Napravi alert koji racuna koliko ima slova u jednoj recenici sa spejsovima</h3>
+		<!--<button onclick="var brojim_slova='Maja Ognjanovic!', x=brojim_slova.length; alert(x)">Klikni me</button>--INLINE-->
+		<button onclick="mojaFunkcija4()">Klikni me</button>					
+							<!--funkcija u JS se pise
+									function mojaFunkcija4(){
+										var brojim_slova='Maja Ognjanovic!', x=brojim_slova.length; alert(x);
+									
+									}
+							-->
+	<hr><!-- /Napravi alert koji racuna koliko ima slova u jednoj recenici sa spejsovima--------------------------------------->
+	
+	
+   
+	<!--Prikazi tekst u alertu sa specijalnim karakterima npr znaci navodnika itd(u JS se zovu escape karakteri-->
+		<h3>Prikazi tekst u alertu sa specijalnim karakterima npr znaci navodnika </h3>
+		<button onclick="mojaFunkcija5()">Klikni me</button>					
+							<!--funkcija u JS se pise
+									function mojaFunkcija5(){
+												alert(" "We are \"Vikings\" ");		
+									}
+							-->
+	<hr><!-- /Prikazi tekst sa specijalnim karakterima npr znaci navodnika --------------------------------------->
+	
+	
+	
+	<!--Spojiti 2 reci da bi se prikazale u alertu -->
+		<h3>Spojiti 2 reci da bi se prikazale u alertu</h3>
+		<button onclick="mojaFunkcija6()">Klikni me</button>					
+							<!--funkcija u JS se pise
+									function mojaFunkcija6(){
+										var rec1 = "Hello"; var rec2 = "World!";
+										alert(str1+str2);								
+									}
+							-->
+	<hr><hr><!-- /Spojiti 2 reci da bi se prikazale u alertu-------------------------------------->
+	
+	
+	<!--Naci na kom mestu se nalazi sovo "h" u ovom tekstu -->
+		<h3>Naci na kom mestu se nalazi sovo "h" u ovom tekstu</h3>
+		<button onclick="mojaFunkcija7()">Klikni me</button>					
+							<!--funkcija u JS se pise
+								function mojaFunkcija7(){
+									var tekst = "abcdefghijklm"; var na_kom_mestu = tekst.indexOf("h"); alert(na_kom_mestu);						
+								}
+							-->
+	<hr><hr><!-- /Naci na kom mestu se nalazi sovo "h" u ovom tekstu-------------------------------------->
+	
+	<!--Od cele recenice iseci rec"banane" i izdvojiti je u alertu -->
+		<h3>Od cele recenice iseci rec"banane" i izdvojiti je u alertu</h3>
+		<button onclick="mojaFunkcija8()">Klikni me</button>
+							
+							<!--funkcija u JS se pise
+									function mojaFunkcija8(){
+										var txt = "I can eat bananas all day"; var x = txt.slice(10, 17);alert(x);
+									}
+							-->
+	<hr><!-- /Od cele recenice iseci rec"banane" i izdvojiti je u alertu--------------------------------------->
+	
+	
+	<!--Zameni rec "Hello" sa reci "Welcome".-->
+		<h3>Zameni rec "Hello" sa reci "Welcome"</h3>
+		<button onclick="mojaFunkcija9()">Klikni me</button>
+			<div id="zovi"></div>				
+							<!--funkcija u JS se pise
+									function mojaFunkcija9(){
+										var tekst = "Hello World"; tekst = tekst.replace("Hello", "Welcome");
+										alert(tekst);
+										ili
+										document.getElementById('zovi').innerHTML=tekst;
+									}
+							-->
+	<hr><!-- /Zameni rec "Hello" sa reci "Welcome"--------------------------------------->
+	
+	
+	<!--Sva slova prebaci u VELIKA-->
+		<h3>Sva slova prebaci u VELIKA</h3>
+		<button onclick="mojaFunkcija10()">Klikni me</button>
+							
+							<!--funkcija u JS se pise
+									function mojaFunkcija10(){
+										var tekst = "Hello World"; tekst = tekst.toUpperCase();
+										alert(tekst);
+									}
+							-->
+	<hr><!-- /Sva slova prebaci u VELIKA--------------------------------------->
+	
+	<!--Sva slova prebaci u MALA-->
+		<h3>Sva slova prebaci u MALA</h3>
+		<button onclick="mojaFunkcija11()">Klikni me</button>
+							
+							<!--funkcija u JS se pise
+									function mojaFunkcija11(){
+										var tekst = "HELLO WORLD"; tekst = tekst.toLowerCase();
+										alert(tekst);
+									}
+							-->
+	<hr><!-- /Sva slova prebaci u MALA--------------------------------------->
+	
+	<!--Spoj 2 reci sa funkcijom concat()-->
+		<h3>Spoj 2 reci sa funkcijom concat()</h3>
+		<button onclick="mojaFunkcija11a()">Klikni me</button>
+							
+							<!--funkcija u JS se pise
+									function mojaFunkcija11a(){
+										var string1 = "Hello "; var string2 = "World!"; var rezultat = string1.concat(string2);
+
+										alert(rezultat);
+									}
+							-->
+	<hr><!-- /Spoj 2 reci sa funkcijom concat()--------------------------------------->
+	
+	<!--Iz niza izvuci neke odredjene elemente-->
+		<h3>Iz niza izvuci neke odredjene elemente</h3>
+		<button onclick="mojaFunkcija12()">Klikni me</button>
+		<div id="demo10"></div>					
+							<!--funkcija u JS se pise
+									function mojaFunkcija12(){
+										 var voce = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+										 var citrus = voce.slice(1, 3);
+										 document.getElementById("demo10").innerHTML = citrus;	
+									}
+							-->
+	<hr><!-- /Iz niza izvuci neke odredjene elemente--------------------------------------->
+	
+	
+	
+	<!--Spoj 2 niza i iz spojenog niza izvuci odredjene elemente-->
+		<h3>Spoj 2 niza i iz spojenog niza izvuci odredjene elemente</h3>
+		<button onclick="mojaFunkcija14()">Klikni me</button>
+		<div id="demo14"></div>				
+							
+							<!--funkcija u JS se pise
+									function mojaFunkcija14(){
+										var voce=["Banana", "Orange", "Lemon", "Apple", "Mango"];
+										var povrce=["Grasak", "Krompir", "Sangarepa", "Celer"];
+										var vocePovrce=voce.concat(povrce);
+										var izuciElement=vocePovrce.slice(2,7);
+										document.getElementById("demo14").innerHTML=izuciElement;
+										
+									}
+							-->
+	<hr><!-- /Spoj 2 niza i iz spojenog niza izvuci odredjene elemente------------------------------>
+	
+	
+<!--SYNTAX	
+	<button onclick="mojaFunkcija()">Klikni me</button>
+	<div id="zovi"></div>
+						function mojaFunkcija(){
+										var tekst = "Hello World"; tekst = tekst.replace("Hello", "Welcome"); U fji def varijabla mi je i sta cu da radim sa njom
+										alert(tekst); ispisujem rezultat fje preko alerta ili innerhtml, innerhtml moze biti fja
+										ili
+										document.getElementById('zovi').innerHTML=tekst; varijabla
+																		innerHTML=date(); fja
+																		innerHTML="Zdravo "; neki tekst
+-->
+</body>
+</html>

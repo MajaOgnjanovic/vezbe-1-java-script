@@ -1,0 +1,13 @@
+/*Definisem zelenu boju gde mi pise da su funkcije inline u JS*/
+.inlinejavascript {
+    background: #70ca5a;
+    color:#fff;
+	font-size: 20px;
+    padding: 20px;
+    margin-top:10px;
+    border-radius: 8px;
+    
+}
+h3{
+	color:#36820a;
+}
